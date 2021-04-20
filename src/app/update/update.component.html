@@ -1,0 +1,34 @@
+<div class='card'>
+    <form (ngSubmit)="editNote()" class='bg-pic'>
+<div class='card-header'>
+ Edit Note
+</div>
+<div class='card-body'>            
+  <div class='table-responsive'>
+    <table class='table'>       
+    
+      <tbody>  
+          <tr>
+              <td> <label>TopicName</label></td>
+              <td><input type="text" name="p_id"  [(ngModel)]="noteItem.TopicName"/></td>                  
+            </tr>   
+            <tr>
+                <td><label>Preview</label></td>
+                <td><input type="text" name="p_name" [(ngModel)]="noteItem.Preview"/></td>                  
+              </tr>  
+              <tr>
+                <td><label>Details</label></td>
+                <td><input type="text" name="p_code" [(ngModel)]="noteItem.Details"/></td>                  
+              </tr>  
+              <tr>
+              
+              <tr>
+                <td></td>
+                <td><input type="submit" value="Submit" /></td>                  
+              </tr>             
+      </tbody>
+    </table>
+  </div>
+</div>
+</form>
+</div>

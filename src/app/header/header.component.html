@@ -1,0 +1,11 @@
+
+<nav class="navbar navbar-fixed-top  bg-light">
+<div class="container" style="color:navy;">
+    <h1>{{title}}</h1>
+    <a routerLink="/" style="color:navy; margin-left: 300px;" >Notes</a>
+    <a routerLink="/add"  style="color:navy;" (click)='loggedUser()'> Add Note</a>
+    <a  routerLink='/login' *ngIf='!_auth.loggedIn()' routerLinkActive='active' style="color:navy;"> Log In</a>
+    <a routerLinkActive="active" *ngIf='_auth.loggedIn()' style="color:navy;" (click)='logoutUser()'> Log Out</a>
+</div>
+</nav>
+<img src="/src/app/note-list/images/img.jpg" alt="">

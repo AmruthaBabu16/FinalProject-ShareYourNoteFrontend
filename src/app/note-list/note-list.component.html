@@ -1,0 +1,80 @@
+<div class="card ">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Topic Name
+                    </th>
+                    <th>
+                        Preview
+                    </th>
+                    <th>
+                     
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+
+            <tr *ngFor='let note of notes'> 
+                <td>{{note.TopicName}}</td>
+               
+                <td> <details>
+                    <summary>{{note.Preview}}</summary><p>{{note.Details}}</p>
+                </details></td>
+                <td>
+                    <button class="btn btn-danger "  style="cursor:pointer; background-color: navy;" *ngIf="_auth.loggedIn()" (click)="editNote(note)" style="margin-left: 20px;"> Edit</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-danger" style="cursor:pointer; background-color: navy;" *ngIf="_auth.loggedIn()" (click)="deleteNote(note)"> Delete</button>
+                  </td>
+            </tr>
+           
+            </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
